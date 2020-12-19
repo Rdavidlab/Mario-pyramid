@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <cs50.h>
+int main(void)
+{
+    int n = 0;
+    do
+    {
+        n = get_int("Height: ");
+        //n will be the variable that contains the height
+    }
+    while (n <= 0 || n > 8);
+
+    //for each row, make loop for # and space. i=rows
+
+    for (int i = 1 ; i <= n; i++)
+    {
+        // for each row, create function to create space. j=space
+        for (int j = (n - i); j > 0; j--)
+        {
+            printf(" ");
+        }
+        // for x print hashes
+        for (int x = 1; x <= i; x++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+    return 0;
+}
